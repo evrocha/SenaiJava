@@ -9,10 +9,11 @@ public class main {
 	System.out.println("Qual o nome da pessoa?");
 	pessoa1.nome = entrada.nextLine();
 	
-	System.out.printf("Qual o número de figurinhas do () ", pessoa1.nome);
+	System.out.printf("Qual o número de figurinhas do(a) %s", pessoa1.nome);
 	pessoa1.numFig = enter.nextInt();
-	System.out.println(pessoa1.nome);
-	System.out.println(pessoa1.numFig);
+	
+	System.out.printf("O número de cartas do(a) %s é: %d",pessoa1.nome, pessoa1.numFig);
+	//System.out.println(pessoa1.numFig);
 	
 	}
 
