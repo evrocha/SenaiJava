@@ -1,2 +1,0 @@
-# SenaiJava
-Aulas do SENAI
