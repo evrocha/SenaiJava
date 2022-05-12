@@ -1,11 +1,14 @@
 // o abstract torna os metodos obrigatorios a serem usados
 public abstract class Item  {
+	
 	private int posX;
 	private int posY;
+	// criação do metodo pegar
 	
-	public void pegar() {
-		
-	}
+	// criando o metodo abstrato pegar. Todas as classes que extendem ela são obrigadas a usa-lo
+	public abstract void pegar();
+	
+	// metodos get e set que definem  e retornam a posição X e y
 	public int getPosX() {
 		return posX;
 	}
@@ -17,7 +20,5 @@ public abstract class Item  {
 	}
 	public void setPosY(int posY) {
 		this.posY = posY;
-	}
-		
-	
+	}	
 }
