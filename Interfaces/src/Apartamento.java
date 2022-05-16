@@ -1,4 +1,4 @@
-
+// apartamento implementa os metodos da interface ItemCaro.
 public class Apartamento implements ItemCaro {
 
 	@Override
