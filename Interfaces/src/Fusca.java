@@ -1,6 +1,7 @@
-
+// A classe Fusca implementa os metodos da Interface Carro
 public class Fusca implements Carro{
 
+	// sobrescreve os métodos da Interface Carro
 	@Override
 	public void virarEsquerda() {
 		// TODO Auto-generated method stub
