@@ -1,6 +1,6 @@
-// criando a classe ferrai com a implementação da interface ferrari
+// criando a classe ferrari com a implementaÃ§Ã£o da interface de Automovel e ItemCaro
 public class Ferrari implements Automovel, ItemCaro {
-// fazendo a implementação dos metodos sobrescrevendo-os
+// fazendo a implementaÃ§Ã£o dos metodos sobrescrevendo-os
 	@Override
 	public void virarEsquerda() {
 		// TODO Auto-generated method stub
