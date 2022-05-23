@@ -1,6 +1,6 @@
 
 public class Nota {
-	
+	// atributos
 	   double  nota1 = 8.5;
 	   double  nota2= 7.5;
 	   double  nota3 = 6.0;
@@ -10,7 +10,7 @@ public class Nota {
 	   int peso1 = 3;
 	   int peso2 = 2;
 	   int peso3 = 5;   
-	   
+	   // metodo q recebe os valores de  fora e faz o calculo
 	   void calcular( double nota1, double nota2, double  nota3, int peso1,  int peso2, int peso3) {
 		   
 		   notat1 = nota1/10 * peso1;
