@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-	
+	// atributos
 		String nome;
 		int conta;
 		float saldo = 300;
@@ -15,7 +15,7 @@ public class Main {
 		lol = in.nextLine();
 		System.out.println(saldo);
 		
-		System.out.println("Deseja fazer alguma Transferência?");
+		System.out.println("Deseja fazer alguma TransferÃªncia?");
 		lol = in.nextLine();
 		
 	}
