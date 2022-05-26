@@ -1,0 +1,3 @@
+ Mouse: funciona = true, quantidade de botões = 2, tamanho = pequeno
+ Mouse: funciona = false, quantidade de botões = 4, tamanho = médio
+ Mouse: funciona = true, quantidade de botões = 1, tamanho = grande
