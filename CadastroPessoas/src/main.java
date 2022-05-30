@@ -1,3 +1,8 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -7,22 +12,14 @@ import java.util.Scanner;
 
 public class main {
 
-	public static void main(String[] args) {
-//		Scanner scanner = new Scanner(System.in);
-//		
-//		System.out.println("Cadastro de usuário");
-//		
-//		Pessoa pessoa1 = new Pessoa();
-//		
-//		System.out.println("Digite o nome da pessoa cadastrada");
-//	
-//		
+	public static void main(String[] args) throws IOException  {
+	
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Cadastro de usuário");
 		System.out.println();
 		
-		List <Pessoa> listaDePessoas = new ArrayList<Pessoa>();
+		List <Pessoa> listaDePessoasEscrito = new ArrayList<Pessoa>();
 		
 		for (int aux = 0; aux <4; aux++) {	
 			
@@ -33,7 +30,7 @@ public class main {
 			pessoa1.setNome(scanner.next());
 			
 			System.out.println("Digite a Idade: ");
-			pessoa1.setIdade(scanner.nextInt());
+			pessoa1.setIdade(scanner.next());
 		
 			
 			
@@ -49,7 +46,7 @@ public class main {
 			pessoa1.getEndereco().setBairro(scanner.next());
 			
 			System.out.println("Digite o número");
-			pessoa1.getEndereco().setNumero(scanner.nextInt());
+			pessoa1.getEndereco().setNumero(scanner.next());
 		
 			
 			
@@ -67,12 +64,38 @@ public class main {
 				pessoa1.setSexo(sexo);
 			}
 		
-			listaDePessoas.add(pessoa1);
+			listaDePessoasEscrito.add(pessoa1);
 		}
-		for (int aux = 0; aux <4; aux++) {
-			System.out.println(listaDePessoas);
+		
+//		for (int aux = 0; aux <4; aux++) {
+//			System.out.println(listaDePessoas);
+//		}
+//		System.out.println(listaDePessoasEscrito);
+		
+		
+		try(BufferedWriter escrever = new BufferedWriter(new FileWriter("entradaDePessoasEscritos.txt"))){
+			for (Pessoa a: listaDePessoasEscrito){
+				escrever.write(a.toString());	
+			}		
 		}
-	
+		
+		List <Pessoa> listaDePessoasLido = new ArrayList<>();
+		
+		try(BufferedReader reader = new BufferedReader(new FileReader("entradaDePessoasEscritos.txt"))){
+			String line;
+			
+			while((line = reader.readLine())!= null){
+				
+				line += line + "\n";
+				Pessoa lendoPessoa = new Pessoa(line);
+				listaDePessoasLido.add(lendoPessoa);
+			}
+			for(Pessoa lendoPessoa: listaDePessoasLido) {
+				System.out.println(lendoPessoa);
+			}
+		}
+		
+	scanner.close();
 		
 	}
 

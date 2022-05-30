@@ -29,7 +29,7 @@ public class Mouse {
 	@Override
 	public String toString() {
 		
-		//            1                                 2                                       3 
+		//            0                                 1                                       2 
 		return " Mouse: funciona=" + funciona + ", quantidade de botões=" + qtdBotoes + ", tamanho=" + tamanho + "\n";
 	}
 	

@@ -1,2 +1,2 @@
-Qualquer coisa aqui
-Segunda linha
+ Mouse: funciona=sim, quantidade de botões=2, tamanho=pequeno
+ Mouse: funciona=nao, quantidade de botões=3, tamanho=enorme

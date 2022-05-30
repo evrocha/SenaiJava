@@ -1,38 +1,14 @@
 
 public class Pessoa {
 //	
-//	int idade; 
-//	String nome;
-//	Endereco endereco;
-//	
-//	public int getIdade() {
-//		return idade;
-//	}
-//	public void setIdade(int idade) {
-//		this.idade = idade;
-//	}
-//	public String getNome() {
-//		return nome;
-//	}
-//	public void setNome(String nome) {
-//		this.nome = nome;
-//	}
-//	public Endereco getEndereco() {
-//		return endereco;
-//	}
-//	public void setEndereco(Endereco endereco) {
-//		this.endereco = endereco;
-//	}
-//	
-//	
-	int idade;
+String idade;
 	String nome;
 	Endereco endereco;
 	Sexo sexo;
-	public int getIdade() {
+	public String getIdade() {
 		return idade;
 	}
-	public void setIdade(int idade) {
+	public void setIdade(String idade) {
 		this.idade = idade;
 	}
 	public String getNome() {
@@ -54,11 +30,45 @@ public class Pessoa {
 		this.sexo = sexo;
 	}
 	
+	public Pessoa() {
+		
+	}
 	@Override
 	public String toString() {
 //		return "Pessoa [idade=" + idade + ", nome=" + nome + ", endereco=" + endereco + ", sexo=" + sexo + "]";
-		return "Cadastro de pessoa [idade=" + idade + ", Nome=" + nome + ", Endereco= " + " Rua: " + endereco.getRua() + " ,Número: "+ endereco.getNumero() + " ,Bairro: "+ endereco.getBairro()+", Sexo =" + sexo + "]";
+		
+		
+		//                                    0                      1           2                                             3                                      4                                   5
+		return "Cadastro de pessoa [idade=" + idade + ", Nome=" + nome + ", Endereco= " + endereco;
 
+	}
+	public Pessoa (String texto) {
+		
+		String[] arrayAuxiliar1 = texto.split(",");
+		String[] arrayAuxiliar2 = arrayAuxiliar1[0].split("=");
+		this.idade = arrayAuxiliar2[1].trim();
+		
+		String[] arrayAuxiliar3 = arrayAuxiliar1[1].split("=");
+		this.nome = arrayAuxiliar3[1].trim();
+		
+		String[] arrayAuxiliar4 = arrayAuxiliar1[2].split("=");
+		this.endereco.rua = arrayAuxiliar4[1].trim();
+
+		String[] arrayAuxiliar5 = arrayAuxiliar1[3].split(":");
+		this.endereco.numero = arrayAuxiliar5[1].trim();
+		
+		String[] arrayAuxiliar6 = arrayAuxiliar1[4].split(":");
+		this.endereco.bairro = arrayAuxiliar6[1].trim();
+		
+		String[] arrayAuxiliar7 = arrayAuxiliar1[5].split("=");
+		
+		if (arrayAuxiliar1[5] == "MASCULINO") {
+			this.sexo = Sexo.MASCULINO;
+		}
+		else {
+			this.sexo = Sexo.FEMININO;
+		}
+		
 	}
 	
 	
