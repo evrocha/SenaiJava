@@ -1,4 +1,2 @@
-Cadastro de pessoa [idade=1, Nome=1, Endereco=  Rua: 1 ,Número: 1 ,Bairro: 1, Sexo =MASCULINO
-Cadastro de pessoa [idade=2, Nome=2, Endereco=  Rua: 2 ,Número: 2 ,Bairro: 2, Sexo =FEMININO
-Cadastro de pessoa [idade=3, Nome=3, Endereco=  Rua: 3 ,Número: 3 ,Bairro: 3, Sexo =MASCULINO
-Cadastro de pessoa [idade=4, Nome=4, Endereco=  Rua: 4 ,Número: 4 ,Bairro: 4, Sexo =FEMININO
+Cadastro de pessoa Nome = emaune, Idade = 18, Sexo = MASCULINO, Endereco: Rua =dav, Bairro = ros, Numero = 189
+Cadastro de pessoa Nome = jasijdsai, Idade = 2983, Sexo = FEMININO, Endereco: Rua =sajdsaoj, Bairro = nsdaj, Numero = 283923923893

@@ -17,31 +17,35 @@ public class main {
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Cadastro de usuário");
+		
+		// lista de pessoa que recebe o array de pessoa
+		List <Pessoa> listaDePessoasEscrito = new ArrayList<Pessoa>();
 		System.out.println();
 		
-		List <Pessoa> listaDePessoasEscrito = new ArrayList<Pessoa>();
-		
-		for (int aux = 0; aux <4; aux++) {	
-			
-			Pessoa pessoa1 = new Pessoa();
 	
+		for (int aux = 0; aux <2; aux++) {	
+			// objeto que vai ser instanciado qunado o for começar
+			Pessoa pessoa1 = new Pessoa();
+			
+			
+			System.out.println();
+			System.out.println("CADASTRO: " + aux);
 			
 			System.out.println("Digite o Nome: ");
+			// set nome do objeto pessoa recebe o scanner
 			pessoa1.setNome(scanner.next());
 			
 			System.out.println("Digite a Idade: ");
-			pessoa1.setIdade(scanner.next());
+			pessoa1.setIdade(scanner.nextInt());
 		
-			
-			
+			//  setar o endereco com um noov objeto instanciado
 			pessoa1.setEndereco(new Endereco());
-			System.out.println("Endereço: ");
+			System.out.println("                Endereço: ");
 			
-			
-			System.out.println("Digite a rua: ");
+															//   puxar o endereco de pessoa para 
+			System.out.println("Digite a rua: "); 			// setar seus atributos
 			pessoa1.getEndereco().setRua(scanner.next());
-			System.out.println(pessoa1.getEndereco().getRua());
-			
+
 			System.out.println("Digite o bairro:");
 			pessoa1.getEndereco().setBairro(scanner.next());
 			
@@ -49,36 +53,36 @@ public class main {
 			pessoa1.getEndereco().setNumero(scanner.next());
 		
 			
+			System.out.println("SEXO: 1 (M) ou 2 (F)");
+
+			int op = 0;
 			
-//			String sexo;
-			System.out.println("SEXO: 1 (M) - 2 (F) ");
-			int op = scanner.nextInt();
-			Sexo sexo;
-		
-			if (op == 1){
-				sexo = Sexo.MASCULINO;
-				pessoa1.setSexo(sexo);
+			// enquanto for diferente de 1 ou 2 vai dar erro
+			while(op!=1 && op!=2) {
+				op = scanner.nextInt();
+				// se for dois, via setar como sexo.FEMININO
+				if (op ==2) {
+					pessoa1.setSexo(Sexo.FEMININO);
+				}
+				else if (op == 1){
+					pessoa1.setSexo(Sexo.MASCULINO);
+				}
+				else {
+					System.out.println("Valor inserido inválido! \n");
+					System.out.println("SEXO: 1 (M) ou 2 (F)");
+				}
+				
 			}
-			else if(op == 2){
-				sexo = Sexo.FEMININO;
-				pessoa1.setSexo(sexo);
-			}
-		
+			// no final, ainda dentro do for, é adicionado a pessoa criada a lista de pessoas
 			listaDePessoasEscrito.add(pessoa1);
 		}
-		
-//		for (int aux = 0; aux <4; aux++) {
-//			System.out.println(listaDePessoas);
-//		}
-//		System.out.println(listaDePessoasEscrito);
-		
-		
+	// vai tentar escrever a lista de pessoas escritos em um TXT
 		try(BufferedWriter escrever = new BufferedWriter(new FileWriter("entradaDePessoasEscritos.txt"))){
 			for (Pessoa a: listaDePessoasEscrito){
-				escrever.write(a.toString());	
+				escrever.write(a.toString() + "\n");	
 			}		
 		}
-		
+		// array lista de pessoas lido
 		List <Pessoa> listaDePessoasLido = new ArrayList<>();
 		
 		try(BufferedReader reader = new BufferedReader(new FileReader("entradaDePessoasEscritos.txt"))){
@@ -86,8 +90,8 @@ public class main {
 			
 			while((line = reader.readLine())!= null){
 				
-				line += line + "\n";
 				Pessoa lendoPessoa = new Pessoa(line);
+				
 				listaDePessoasLido.add(lendoPessoa);
 			}
 			for(Pessoa lendoPessoa: listaDePessoasLido) {
@@ -100,3 +104,4 @@ public class main {
 	}
 
 }
+

@@ -1,7 +1,9 @@
 
 public class Endereco {
-	String rua, bairro;
-	String numero;
+	private String rua, bairro;
+	private String numero;
+	
+	// <----  GET E SET ---->
 	public String getRua() {
 		return rua;
 	}
@@ -20,9 +22,33 @@ public class Endereco {
 	public void setNumero(String numero){
 		this.numero = numero;
 	}
+	
+	
+		
+	// é preciso criar um metodo de endereco que nao recebe paramentro para fazer a sobrecarga, ja que um endereco() vai 
+	// receber o paramentro de string texto
+	public Endereco() {
+		super();
+	}
+	// esse vai recber o parametro
+	public Endereco(String[] arrayLinha) {
+		
+		String[] arrayRua = arrayLinha[3].split("=");
+		this.rua = arrayRua[1].trim();
+		
+		String[] arrayBairro = arrayLinha[4].split("=");
+		this.bairro = arrayBairro[1].trim();
+		
+		String[] arrayNumero = arrayLinha[5].split("=");
+		this.numero = arrayNumero[1].trim();
+	}
+	
 	@Override
 	public String toString(){
-		return "Endereco [rua=" + rua + ", bairro=" + bairro + ", numero=" + numero + "]";
+		//                    3                   4                      5
+		return "Rua =" + rua + ", Bairro = " + bairro + ", Numero = " + numero;
 	}
+	
+	
 	
 }
