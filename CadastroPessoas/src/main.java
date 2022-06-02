@@ -17,6 +17,8 @@ public class main {
 		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Cadastro de usuário");
+		// control var
+	
 		
 		// lista de pessoa que recebe o array de pessoa
 		List <Pessoa> listaDePessoasEscrito = new ArrayList<Pessoa>();
