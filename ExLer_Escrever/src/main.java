@@ -13,32 +13,24 @@ public class main {
 		
 		Scanner sc = new Scanner(System.in);
 
-		/// done with scanner
+		/// objeto escrever do tipo BufferedWriter
+		// este bloco de codigos ira escrever as informações em um arq txt
 		try(BufferedWriter escrever = new BufferedWriter(new FileWriter("exercicio.txt"))){
 			System.out.println("Digite qualquer coisa:");
-
 			String txt = sc.next();
 			escrever.write(txt);
 		}
-		
+		// este bloco de codigos ira ler o txt escrito anteriormente
 		try(BufferedReader reader = new BufferedReader(new FileReader("exercicio.txt"))){
 			String line;
-			String string = "";
 			
 			while((line = reader.readLine())!= null){
-				string += line + "\n";
-				System.out.println(string);
+				line += line + "\n";
+				System.out.println(line);
 			}
 		}
+		
 		sc.close();
-		
-		
-		try(BufferedWriter escrever = new BufferedWriter(new FileWriter("exercicio.txt"))){
-			System.out.println("Digite qualquer coisa:");
-			
-			BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-			
-		}
 		
 		
 	

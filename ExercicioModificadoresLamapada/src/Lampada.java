@@ -29,17 +29,21 @@
 //	ligada	= true;
 //	}
 public class Lampada {
+	 // atributo que indica se ela está ligada ou desligada
 	private boolean ligada; // nao é visivel fora da classe
 	// criar metodos ligar e desligar para informar o estado da lampada
 	
+	// altera o estado do metodo lgiar da lampada
 	public void ligar() {
 		this.ligada = true;
 	}
 	
+	// altera o estado do metodo desligar da lampada
 	public void desligar() {
 		this.ligada = false;
 	}
 	
+	// recebe o parametro boolean que indica se ela esta ligada ou deslgiada
 	public Lampada(boolean ligar) {
 		this.ligada = ligar;
 	}

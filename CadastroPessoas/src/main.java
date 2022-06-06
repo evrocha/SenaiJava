@@ -87,6 +87,7 @@ public class main {
 		// array lista de pessoas lido
 		List <Pessoa> listaDePessoasLido = new ArrayList<>();
 		
+		// lendo a lista "de objetos" Pessoa que esta em TXT
 		try(BufferedReader reader = new BufferedReader(new FileReader("entradaDePessoasEscritos.txt"))){
 			String line;
 			
@@ -97,6 +98,7 @@ public class main {
 				listaDePessoasLido.add(lendoPessoa);
 			}
 			for(Pessoa lendoPessoa: listaDePessoasLido) {
+//				ao final, dar um SYSO na lista
 				System.out.println(lendoPessoa);
 			}
 		}

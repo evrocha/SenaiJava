@@ -1,11 +1,11 @@
 
 public class Mouse {
-	
+	// atributos de Mouse
 	private boolean funciona;
 	private int qtdBotoes;
 	private String tamanho;
 	
-	
+	// < --------- METODOS GET E SET ------- >
 	public boolean isFunciona() {
 		return funciona;
 	}

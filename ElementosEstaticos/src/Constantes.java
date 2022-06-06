@@ -1,7 +1,7 @@
 
 public class Constantes {
 //		public static final double MEDIA_DA_PROVA = 7.0;
-
+// o "final" estipula que sera uma constante do tipo dito
 	public static final double MEDIA_DA_PROVA;
 	
 	static {

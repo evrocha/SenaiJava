@@ -1,12 +1,15 @@
 
 public class Pessoa {
-//	
+//	atributos privados da classe Pessoa
+	
 	 private String nome;
 	 private int idade;
+//	atributo de tipo enum SEXO
 	 private Sexo sexo;
+//	  atributo de tipo Endereco
 	 private Endereco endereco;
 	 
-	// <----- GET E SET------>
+	// <----- GET E SET dos atributos------>
 	 
 	public int getIdade() {
 		return idade;
@@ -33,10 +36,11 @@ public class Pessoa {
 		this.sexo = sexo;
 	}
 	
-	// metodo de pessoa vazio que nao recebe parametnro, para haver sobrecarga
+	// metodo de pessoa vazio que nao recebe parametro, para haver sobrecarga
 	public Pessoa() {
 		
 	}
+	// sobreposição do metodo to string 
 	@Override
 	public String toString() {
 		
@@ -46,7 +50,8 @@ public class Pessoa {
 	}
 	// sobrecarga com paramentros que recebe a string
 	public Pessoa (String texto) {
-		
+		// aqui vai começar o tratamento da String.
+		// Ela, primeiro sera quebrada nas virgulas. Depois, cada array vai receber a respectiva parte da string que tenha a info necessaria.
 		// auxiliar 1 recebe a string inteira dividida por virgulas
 		String[] arrayLinha = texto.split(",");
 		
