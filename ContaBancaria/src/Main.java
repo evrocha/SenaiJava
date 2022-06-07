@@ -2,30 +2,24 @@
 public class Main {
 
 	public static void main(String[] args) {
-		
+		// passando os parametros do obj no construtor
 		ContaBancaria conta1 = new ContaBancaria(3.0,true);
 		
-//		conta1.ativo = true;
-//		conta1.numConta = 2;
-//		conta1.saldo = 100.50;
-//		
-//		System.out.println(conta1.ativo);
-//		System.out.println(conta1.numConta);
-//		System.out.println(conta1.saldo);
-//		
-//		conta1.receba(100.8);
-//		conta1.dar(110);
 		System.out.println(conta1.verSaldo());
+		
+		// outro obj sme parametros
 		ContaBancaria conta2 = new ContaBancaria();
 		System.out.println(conta2.verSaldo())
 		;
 		
 		Cliente cliente = new Cliente();
 		
+		// adicionando informacoes aos atributos
 		cliente.setNome("Marcus");
 		cliente.setCpf(65364779);
 		cliente.setNumConta(4535235);
 		
+		// mostrando os valores
 		System.out.println(cliente.getNome());
 		System.out.println(cliente.getCpf());
 		System.out.println(cliente.getNumConta());
@@ -41,13 +35,16 @@ public class Main {
 		System.out.println(cliente1);
 		System.out.println();
 		
-		if(cliente1 == cliente) {//comparaÁ„o de endereÁos das classes
-			System.out.println("Os objetos s„o iguais");
+		
+		//compara√ß√£o de valor endere√ßos dos objetos
+		if(cliente1 == cliente) {
+			System.out.println("Os objetos s√£o iguais");
 		}else {
-			System.out.println("Os objetos s„o diferentes");
+			System.out.println("Os objetos s√£o diferentes");
 		}
 		
-		if (cliente.equals(cliente1)){//comparaÁ„o de atributos
+		//compara√ß√£o dos aributos dos dois objetos pelo metodo equals()
+		if (cliente.equals(cliente1)){
 		
 			System.out.println("tudo igual");
 		}else {
