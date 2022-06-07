@@ -1,15 +1,15 @@
-
-public enum DiadaSemana { //Enum é um tipo de dado.
-
-	Domingo(1), Segunda(2), Terca(3), Quarta(4), Quinta(5), Sexta(6), Sabado(7); //informações constantes. São separados por virgulas. Todos esses dias da semana são um objeto. 
+ //Enum Ã© um tipo de dado.
+public enum DiadaSemana {
+ //infos constantes do enum. sao objetos
+	Domingo(1), Segunda(2), Terca(3), Quarta(4), Quinta(5), Sexta(6), Sabado(7);
 	
 	private int num;
 
-	private DiadaSemana(int num) { //Ao add um construtor 
+	private DiadaSemana(int num) { //o consrutor recebe um parametro
 		this.num = num;
 	}
 
-	public int getNum() { //get para ter acesso a info "num".
+	public int getNum() { //get para acessar a informacao "num".
 		return num;
 	}
 
