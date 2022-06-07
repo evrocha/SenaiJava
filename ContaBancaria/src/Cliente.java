@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Cliente {
-
+// atributos 
 	private String nome;
 	private int cpf;
 	private int numConta;
@@ -9,7 +9,7 @@ public class Cliente {
 	public Cliente() {
 		
 	}
-
+// <!-- GETS E SETTERS
 	public String getNome() {
 		return nome;
 	}
@@ -33,17 +33,13 @@ public class Cliente {
 	public void setNumConta(int numConta) {
 		this.numConta = numConta;
 	}
-
+// Override do metodo to string
 	@Override
 	public String toString() {
 		return "\n nome=" + nome + "\n cpf=" + cpf + "\n numConta=" + numConta;
 	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(cpf, nome, numConta);
-	}
-
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
