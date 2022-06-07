@@ -1,26 +1,28 @@
 
 public class Main {
-
+// constane pi com o valor estatico e constante
 	public static final double PI = 3.14;
 	
+	
+	// enum e o tipo de dado que o dev cria, nao pode ser modificado
 	private enum Sexo{
-		Masculino, Feminino;
-		
-		
+		Masculino, Feminino;	
 	}
 	
 	public static void main(String[] args) {
-		
+		// pi recebe o valor da constante de pi da classe main
 		double pi = Main.PI;
 		
-		DiadaSemana hoje = DiadaSemana.Segunda; //"hoje" só aceita os endereços q estão presentes em "Enum".
+		DiadaSemana hoje = DiadaSemana.Segunda; //"hoje" sÃ³ aceita os endereÃ§os q estÃ£o presentes em "Enum".
 		
 		int num = DiadaSemana.Segunda.getNum();
 		
 		System.out.println(num);
 		
 		String s = "Terca";
-		hoje = DiadaSemana.valueOf(s); //O método valueOf irá procurar em "DiadaSemana" alguma informação q se pareça com a info da variavel "s", ou seja, "Terça", meio que fazendo uma transformação, retornando p endereço.
+		
+		 //O mÃ©todo valueOf irÃ¡ procurar em "DiadaSemana" algum valor q seja parecido com a info da variavel "s", ou seja, "TerÃ§a", "fazendo" uma transformaÃ§Ã£o, retornando p endereÃ§o.
+		hoje = DiadaSemana.valueOf(s);
 		
 		System.out.println(hoje.getNum());
 		
