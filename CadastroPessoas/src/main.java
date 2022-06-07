@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// cadastrar 4 pessoas e receber Nome, idade, sexo (enum mas e fem) e endereço
-// em endereço, receber a rua, o numero e o bairro
+// cadastrar 4 pessoas e receber Nome, idade, sexo (enum mas e fem) e endereÃ§o
+// em endereÃ§o, receber a rua, o numero e o bairro
 
 public class main {
 
@@ -16,7 +16,7 @@ public class main {
 	
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Cadastro de usuário");
+		System.out.println("Cadastro de usuÃ¡rio");
 		// control var
 	
 		
@@ -26,7 +26,7 @@ public class main {
 		
 	
 		for (int aux = 0; aux <2; aux++) {	
-			// objeto que vai ser instanciado qunado o for começar
+			// objeto que vai ser instanciado qunado o for comeÃ§ar
 			Pessoa pessoa1 = new Pessoa();
 			
 			
@@ -42,7 +42,7 @@ public class main {
 		
 			//  setar o endereco com um noov objeto instanciado
 			pessoa1.setEndereco(new Endereco());
-			System.out.println("                Endereço: ");
+			System.out.println("                EndereÃ§o: ");
 			
 															//   puxar o endereco de pessoa para 
 			System.out.println("Digite a rua: "); 			// setar seus atributos
@@ -51,7 +51,7 @@ public class main {
 			System.out.println("Digite o bairro:");
 			pessoa1.getEndereco().setBairro(scanner.next());
 			
-			System.out.println("Digite o número");
+			System.out.println("Digite o nÃºmero");
 			pessoa1.getEndereco().setNumero(scanner.next());
 		
 			
@@ -70,15 +70,17 @@ public class main {
 					pessoa1.setSexo(Sexo.MASCULINO);
 				}
 				else {
-					System.out.println("Valor inserido inválido! \n");
+					System.out.println("Valor inserido invÃ¡lido! \n");
 					System.out.println("SEXO: 1 (M) ou 2 (F)");
 				}
 				
 			}
-			// no final, ainda dentro do for, é adicionado a pessoa criada a lista de pessoas
+			// no final, ainda dentro do for, Ã© adicionado a pessoa criada a lista de pessoas
 			listaDePessoasEscrito.add(pessoa1);
 		}
-	// vai tentar escrever a lista de pessoas escritos em um TXT
+	// try Ã© para tratar as possiveis excecoes
+		// bufferedWter Ã© o metodo que escreve em um arquivo txt
+		// o arquivo vai ser criado pelo metodo fileWriter
 		try(BufferedWriter escrever = new BufferedWriter(new FileWriter("entradaDePessoasEscritos.txt"))){
 			for (Pessoa a: listaDePessoasEscrito){
 				escrever.write(a.toString() + "\n");	
@@ -88,6 +90,8 @@ public class main {
 		List <Pessoa> listaDePessoasLido = new ArrayList<>();
 		
 		// lendo a lista "de objetos" Pessoa que esta em TXT
+		// try vai tratar as excecoes
+		// filreader method vai procurar o arquivo txt
 		try(BufferedReader reader = new BufferedReader(new FileReader("entradaDePessoasEscritos.txt"))){
 			String line;
 			
