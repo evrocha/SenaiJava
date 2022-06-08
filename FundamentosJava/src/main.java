@@ -17,33 +17,39 @@ public class main {
 //		System.out.println(a);
 //		System.out.println(b);
 	
-				// neste bloco de codigos ha uma condição que lê a idade de uma pessoa e, dependendo do valor, ha uma mensagem personalizada
+				// neste bloco de codigos ha uma condiacao que le a idade de uma pessoa e, se for um valor, retorna  uma mensagem personalizada
+		
 		//int idadePessoa=61;
 		//if(idadePessoa < 18) {
-			//System.out.println("Você não pode beber");
+			//System.out.println("VocÃª nÃ£o pode beber");
 		//}
+		
+		// se for outro valor, retorna outro
+		
 		//else if(idadePessoa < 60) {
 			//System.out.println("Permitido beber");
 		//}
 		//else {
-			//System.out.println("quanto é sua aposentadoria?");
+			//System.out.println("quanto Ã© sua aposentadoria?");
 		//}
-		//System.out.println("Você tem " + idadePessoa);
+		//System.out.println("VocÃª tem " + idadePessoa);
 		
 		
-			// bloco de codigos que, usando o switch case (escolha caso), manda uma mensagem diferente a cada dia da semana
+			// bloco de codigos que, usando o switch case (escolha caso), manda uma mensagem diferente a cada dia da semana;
+		// a cada CASE diferente
 //		Scanner op = new Scanner(System.in);
-//		System.out.println("Digite qual é o dia da semana");
+//		System.out.println("Digite qual Ã© o dia da semana");
 //		int num = op.nextInt();
 //		switch(num) {
 //			case 1:
 //				System.out.println("Domingo" );
+		// break pra interromper o case
 //				break;
 //			case 2:
 //				System.out.println("Segunda-feira");
 //				break;
 //			case 3:
-//				System.out.println("Terça-feira");
+//				System.out.println("TerÃ§a-feira");
 //				break;
 //			case 4:
 //				System.out.println("Quarta-feira");
@@ -55,10 +61,11 @@ public class main {
 //				System.out.println("Sexta-feira");
 //					break;	
 //			case 7:
-//				System.out.println("Sábado");
+//				System.out.println("SÃ¡bado");
 //					break;	
+		// default caso nenhuma das outras condicoes sejam atendidas
 //			default:
-//				System.out.println("Esse número não representa um dia da semana");
+//				System.out.println("Esse nÃºmero nÃ£o representa um dia da semana");
 //	}
 		
 		
@@ -67,13 +74,13 @@ public class main {
 //		char caractere = Integer.(op.nextLine());
 //	switch(caractere) {
 //	case 'a':
-//		System.out.println("Seu caractere é a");
+//		System.out.println("Seu caractere Ã© a");
 //		break;
 //case 'b':
-//		System.out.println("Seu caractere é b");
+//		System.out.println("Seu caractere Ã© b");
 //	break;
 //	default:
-//	System.out.println("Opção Inválida");
+//	System.out.println("OpÃ§Ã£o InvÃ¡lida");
 //}
 //	
 		
@@ -91,18 +98,18 @@ public class main {
 //			System.out.println("PARE");
 //			break;
 //		case "Amarelo":
-//			System.out.println("Atenção!!!");
+//			System.out.println("AtenÃ§Ã£o!!!");
 //			break;
 //		
 //		case "Verde":
 //			System.out.println("Siga!!!");
 //			break;
 //		default:
-//			System.out.println("Nenhuma opção disponível");
+//			System.out.println("Nenhuma opcao disponivel");
 //		}
 		
 		
-		//  enquanto x for menor que  10, acrescerá um em X e mostrara um SYSO disso
+		//  enquanto x for menor que  10, acrescera¡ um em X e mostrara um SYSO disso
 //		while(x<10) {
 //			x ++;
 //			System.out.println(x);
@@ -113,11 +120,11 @@ public class main {
 //		Scanner op = new Scanner(System.in);
 //		x=555;
 //		int pss;
-//		System.out.println("Qual é a senha do cofre?");
+//		System.out.println("Qual Ã© a senha do cofre?");
 //
-		// vai executar esse bloco de comando antes de verificar a condição
+		// vai executar esse bloco de comando antes de verificar a condiÃ§Ã£o
 //		do{
-//			System.out.println("Digite um número");
+//			System.out.println("Digite um nÃºmero");
 //			pss= op.nextInt();
 //			if(pss!=x){System.out.println("Senha incorreta");}
 //		}
@@ -141,20 +148,20 @@ public class main {
 //		// criando uma matriz X do tipo double com 4 indices
 //		double x[] = {3,5,3,5};
 //		
-//		// laço de repetição FOR
+//		// laÃ§o de repetiÃ§Ã£o FOR
 //		// enquanto a variavel inteira aux for menor que o tamanho da matriz, acresce um em aux
 //		for (int aux = 0; aux < x.length; aux ++) {
-//			System.out.println("Valor do indíce" + aux + " = "+ x[aux]);
+//			System.out.println("Valor do indÃ­ce" + aux + " = "+ x[aux]);
 //			}
 //		// matriz de tipo String
 //		String nome[] = {"Rafael", "Gislene", "Lara"};
 //		
-//		// basicamente a mesma condição do laço anterior
+//		// basicamente a mesma condicao do laco anterior
 //		for (int aux1 = 0; aux1 < nome.length; aux1++) {
 //			System.out.println(nome[aux1]);
-//			// se o nome contido em aux1 for gislene, retornara na tela a informação
+//			// se o nome contido em aux1 for gislene, retornara na tela a informaÃ§Ã£o
 //			if (nome[aux1] == "Gislene"){
-//				System.out.println("O indíce de Gislene é = "+ aux1);
+//				System.out.println("O indÃ­ce de Gislene Ã© = "+ aux1);
 //			}
 //		
 //		}
@@ -166,15 +173,15 @@ public class main {
 //		// a variavel 4 esta no terceiro indice
 //		arrayInt[3] = 4;
 //		
-//		// neste bloco de codigos um valor int é capturado via scanner a cada repetição que for permitida, e no final há o retorno na tela
+//		// neste bloco de codigos um valor int Ã© capturado via scanner a cada repetiÃ§Ã£o que for permitida, e no final hÃ¡ o retorno na tela
 //		int[] numero = new int[6];
 //		Scanner teclado = new Scanner(System.in);
 //		
 //		for(int aux2 =0; aux2 < numero.length; aux2++) {
-//			System.out.println("Digite um número qualquer");
+//			System.out.println("Digite um nÃºmero qualquer");
 //		}
 //		for (int aux2=0; aux2 <numero.length; aux2++) {
-//			System.out.println("Indíce " + aux2 + " = "+ numero[aux2]);
+//			System.out.println("IndÃ­ce " + aux2 + " = "+ numero[aux2]);
 //		}
 		
 		// criando matrizes 
@@ -188,7 +195,7 @@ public class main {
 		arrayObject[2] = 13.8;
 		arrayObject[3] =  true;
 		//c como nao foi especificado o valor de Indice , ele vai retornar NULL, ja q ao ser criado ele tem que ser inicializado com algum valor
-		// quando retornar o endere�o, vai ter um "[I" que indica que e uma matriz de tipo inteiro
+		// quando retornar o endereço, vai ter um "[I" que indica que e uma matriz de tipo inteiro
 		arrayObject[5] = arrayQualquer;
 		
 		
@@ -205,7 +212,7 @@ public class main {
 		for(int linha =0; linha < arrayBidirecional.length; linha ++) {
 			// for que itera as colunas da matriz
 			for (int coluna = 0; coluna < arrayBidirecional[0].length; coluna++) {
-				System.out.print("Ind�ce [" + linha + "][" + coluna + "] = "  + arrayBidirecional[linha][coluna]+ " " +
+				System.out.print("Indíce [" + linha + "][" + coluna + "] = "  + arrayBidirecional[linha][coluna]+ " " +
 					arrayBidirecional[linha][coluna] +  " ");
 			}
 			System.out.println();
