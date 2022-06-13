@@ -1,3 +1,4 @@
+// importando classes
 import java.util.Scanner;
 public class Aplicacao {
 
@@ -6,17 +7,19 @@ public class Aplicacao {
 		Scanner in = new Scanner(System.in);
 		
 		
-		
+		// objeto de matematica
 		Matematica matematica = new Matematica();
 		
-		System.out.println("Somar dois números");
+		System.out.println("Somar dois nÃºmeros");
 		System.out.println();
-		System.out.println("Digite o primeiro número");
+		System.out.println("Digite o primeiro nÃºmero");
 		System.out.println();
+		// atribui o valor ao x
 		int x = in.nextInt();
-		System.out.println("Digite o segundo número");
+		System.out.println("Digite o segundo nÃºmero");	
+		// atribui o valor ao x
 		int y = in.nextInt();
-		System.out.println("Digite o terceiro número");
+		System.out.println("Digite o terceiro nÃºmero");
 		int z = in.nextInt();
 		int soma = matematica.somar(x, y);
 		
